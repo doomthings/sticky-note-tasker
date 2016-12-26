@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Draggable Tasker</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />  
+  <link rel="stylesheet" href="hanyok.css" media="screen" />
+  <script type="text/javascript" src="javascripts/prototype.js"></script><script type="text/javascript" src="javascripts/scriptaculous.js"></script>
+		
+  
+</head>
+<body>
+
+
+	<div id="content">
+	  <h1>Tasker</h1>
+
+		<!-- TEST JAVASCRIPT -->
+		<p id="demo">A Paragraph.</p>
+		<button type="button" onclick="myFunction()">Try it</button>
+		<script src="myScript.js"></script>
+
+	<!-- CREATE NEW TASK -->
+	<div class='container'>
+		<h3> Add New Task </h3>
+		<input id='newTask' type='text'>
+		<button id='addTaskButton'>Add</button>
+			<br/>
+	
+	<div style="float:left">
+		<h3><center>Received</center></h3>
+		 <ul id="List1">
+
+		 </ul>
+		</div>
+
+      <div style="float:left;margin-left:32px">
+	  <h3><center>In Progress</center></h3>
+         <ul id="List2">
+
+         </ul>
+      </div>
+	  
+	<div style="float:left;margin-left:32px">
+	  <h3><center>Completed</center></h3>
+         <ul id="List3">
+			<li>Task 1</li>
+         </ul>
+      </div>
+	  
+	  </div>
+		<!-- MODAL LOGINS: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form_modal -->
+		<!-- SORTING LISTS https://www.tutorialspoint.com/script.aculo.us/scriptaculous_sorting.htm -->
+		<!-- USING AJAX TO STORE LIST ORDER FOR NEXT LOGIN: https://www.tutorialspoint.com/ajax/what_is_ajax.htm -->
+		<!-- STORINGE DATA LOCALLY: http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/ -->
+	  
+	  
+		<!-- JAVASCRIPTS -->
+		<script src="myScript.js"></script> 
+
+		<!-- CREATE SORTABLES -->
+      <script type="text/javascript">
+         window.onload = function() {
+            Sortable.create('List1', {containment: ['List1','List2','List3'], dropOnEmpty: true});
+            Sortable.create('List2', {containment: ['List1','List2','List3'], dropOnEmpty: true});
+			Sortable.create('List3', {containment: ['List1','List2','List3'], dropOnEmpty: true});
+         }
+      </script>
+
+
+
+</body>
+</html>
